@@ -141,7 +141,7 @@ if (all_4week_baseline) {
 } else if (all_16week_baseline) {
     full_dataset <- full_dataset %>%
         filter(!subject_id %in% missing_week16_subjects)
-} else if (all_4week_baseline & all_16week_baseline) {
+} else if (all_4week_baseline && all_16week_baseline) {
     full_dataset <- full_dataset %>%
         filter(!subject_id %in% missing_baseline_subjects)
 } else {
