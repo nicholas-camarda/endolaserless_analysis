@@ -38,3 +38,5 @@ Thumbs.db
 # Exclude all data files
 data/
 processed_data/
+npi_project/prism_output/.DS_Store
+npi_project/prism_output/old version/
