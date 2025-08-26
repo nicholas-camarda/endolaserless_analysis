@@ -1,0 +1,62 @@
+# R specific files
+.Rhistory
+.RData
+.Ruserdata
+*.Rproj
+*.Rproj.user/
+
+# OS specific files
+.DS_Store
+Thumbs.db
+
+# Temporary files
+*.tmp
+*.temp
+*.log
+
+# History files
+.history/
+
+# Exclude everything by default
+*
+
+# Include only specific files and directories
+!.gitignore
+!README.md
+
+# Include specific scripts
+!scripts/
+!scripts/count_prn_injections.R
+!scripts/endolaserless_analysis-2.R
+!scripts/helper_scripts.R
+
+# Include specific data files
+!data/
+!data/old/
+!data/old/2024-10-22 Endolaserless_RedCap_Data.xlsx
+!data/old/prn_injections.xlsx
+!data/old/Stats Wisconsin (Nick Edited).xlsx
+
+# Include specific processed data
+!processed_data/
+!processed_data/npi_project/
+!processed_data/npi_project/output-week4_baseline/
+!processed_data/npi_project/output-week4_baseline/cached_long_input_data.xlsx
+!processed_data/npi_project/output-week4_baseline/cached_wide_input_data.xlsx
+
+# Include specific output directories
+!output/
+!output/npi_project/
+!output/npi_project/prism_output/
+!output/npi_project/prism_output/*.pdf
+!output/npi_project/prism_output/*.tiff
+!output/npi_project/prism_output/Final/
+!output/npi_project/prism_output/Final/*.tiff
+
+# Include npi_project prism output
+!npi_project/
+!npi_project/prism_output/
+!npi_project/prism_output/*.pdf
+!npi_project/prism_output/*.tiff
+!npi_project/prism_output/Final/
+!npi_project/prism_output/Final/*.tiff
