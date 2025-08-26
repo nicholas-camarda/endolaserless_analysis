@@ -30,13 +30,16 @@ Thumbs.db
 !scripts/endolaserless_analysis-2.R
 !scripts/helper_scripts.R
 
+# Include docs directory with PNG figures
+!docs/
+!docs/*.png
+
 # Include Prism output figures
 !npi_project/
 !npi_project/prism_output/
 !npi_project/prism_output/**/*
 
-# Exclude all data files
+# Exclude all data files and output files
 data/
 processed_data/
-npi_project/prism_output/.DS_Store
-npi_project/prism_output/old version/
+npi_project/output/
