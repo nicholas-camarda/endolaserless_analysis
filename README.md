@@ -12,10 +12,6 @@ We processed and analyzed ultra-widefield fluorescein angiography (UWFA) images 
 
 Qin LG*, **Camarda ND\***, Kasetty VM, Starnes DC, Sood N, Blodi BA, Marcus DM. *Ultra-wide field fluorescein angiographic retinal nonperfusion grading in eyes receiving aflibercept monotherapy after endolaserless vitrectomy for proliferative diabetic retinopathy-related vitreous hemorrhage.* Submitted to RETINA: The Journal of Retinal and Vitreous Diseases (March 2025).
 
-**Study Registration**
-
-Laserless Study (NCT02976012) - A prospective randomized trial of aflibercept monotherapy after endolaserless vitrectomy for proliferative diabetic retinopathy (PDR)-related vitreous hemorrhage.
-
 ## Key Findings
 
 The analysis code supports the following key findings:
