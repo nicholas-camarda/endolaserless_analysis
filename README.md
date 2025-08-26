@@ -36,14 +36,29 @@ endolaserless_analysis/
 │   ├── Figure2.png                     # Figure 2 - NPI increases in q16 group
 │   ├── Figure3.png                     # Figure 3 - Treatment load and PRN injections
 │   └── SupplementalFigure1.png         # Supplemental Figure 1 - NPA changes
+├── data/                               # Input data files (NOT committed to repository)
+│   └── old/                            # Historical data files
+│       ├── Endolaserless_RedCap_Data.xlsx
+│       ├── Stats Wisconsin (Nick Edited).xlsx
+│       └── prn_injections.xlsx
+├── processed_data/                      # Processed analysis data (NOT committed to repository)
+│   └── npi_project/
+│       └── output-week4_baseline/
+│           ├── cached_long_input_data.xlsx
+│           └── cached_wide_input_data.xlsx
 ├── npi_project/
 │   ├── prism_output/                   # Prism-generated figures and visualizations
 │   │   ├── Final/                      # Final publication figures (TIFF format)
 │   │   └── [other analysis plots]
-│   └── output/                         # Analysis output files (not committed)
+│   └── output/                         # Analysis output files (NOT committed to repository)
+│       ├── count_prn_injections/       # PRN injection analysis outputs
+│       ├── output-week4_week16_baseline/ # Main analysis outputs
+│       └── [various Excel output files]
 ├── README.md                           # This file
 └── .gitignore                          # Git ignore rules
 ```
+
+**Note:** Data directories (`data/`, `processed_data/`, `npi_project/output/`) are excluded from the repository for privacy and size considerations. Users should create these directories and add their own data files when running the analysis scripts.
 
 ## Prism Output Figures
 
