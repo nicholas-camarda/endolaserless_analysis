@@ -1,4 +1,17 @@
 rm(list = ls())
+
+# =============================================================================
+# PATH CONFIGURATION
+# =============================================================================
+# Set the base output directory - modify this to change where all output goes
+base_output_dir <- "npi_project/output"
+
+# Set the specific analysis output directory
+top_output_dir <- file.path(base_output_dir, "output-week4_week16_baseline")
+
+# =============================================================================
+# LIBRARIES AND SETUP
+# =============================================================================
 library(tidyverse)
 library(readxl)
 library(GetoptLong)
@@ -11,7 +24,7 @@ source(file.path("scripts", "helper_scripts.R"))
 
 
 # make output directories
-top_output_dir <- "output/npi_project/output-week4_week16_baseline"
+# top_output_dir <- "output/npi_project/output-week4_week16_baseline"
 
 # Set logical variables based on output directory string
 all_4week_baseline <- grepl("week4", top_output_dir)
@@ -799,7 +812,7 @@ write.xlsx(
     file.path(processed_dir, qq("avg_npi_by_schedule_and_week.xlsx"))
 )
 
-message("\nDone! Refer to output/ for results.")
+message(paste0("\nDone! Refer to ", base_output_dir, " for results."))
 
 # Closes the message sink
 sink(type = "message")

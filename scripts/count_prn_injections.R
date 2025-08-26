@@ -1,3 +1,13 @@
+# =============================================================================
+# PATH CONFIGURATION
+# =============================================================================
+# Set the base output directory - modify this to change where all output goes
+base_output_dir <- "npi_project/output/count_prn_injections"
+dir.create(base_output_dir, showWarnings = FALSE, recursive = TRUE)
+
+# =============================================================================
+# LIBRARIES AND SETUP
+# =============================================================================
 library(tidyverse)
 library(ggprism)
 library(readxl)
@@ -23,7 +33,7 @@ time_to_10_injections <- init_npi_dat %>%
     mutate(event = if_else(is.na(time_to_10), 0, 1)) %>%
     mutate(time_to_10 = if_else(is.na(time_to_10), 152, time_to_10)) %>%
     pivot_wider(id_cols = c(subject_id, time_to_10), names_from = schedule, values_from = event)
-time_to_10_injections %>% write.xlsx("output/time_to_10_injections.xlsx")
+time_to_10_injections %>% write.xlsx(file.path(base_output_dir, "time_to_10_injections.xlsx"))
 
 npi_data <- init_npi_dat %>%
     filter(week %in% c("week4", "week52", "week104", "week152")) %>%
@@ -52,7 +62,7 @@ npa_data <- read_excel("data/old/2024-10-22 Endolaserless_RedCap_Data.xlsx") %>%
 npa_data %>%
     arrange(schedule) %>%
     pivot_wider(id_cols = c(schedule, subject_id), names_from = week, values_from = npa) %>%
-    write.xlsx("output/npa_by_week.xlsx")
+    write.xlsx(file.path(base_output_dir, "npa_by_week.xlsx"))
 
 npa_data_means <- npa_data %>%
     filter(week %in% c(4, 52, 104, 152)) %>%
@@ -141,7 +151,7 @@ time_to_avg_prn_injections <- data_long %>%
     mutate(time_to_prn_avg = if_else(is.na(time_to_prn_avg), 152, time_to_prn_avg)) %>%
     pivot_wider(id_cols = c(subject_id, time_to_prn_avg), names_from = group, values_from = event)
 time_to_avg_prn_injections %>% print(n = Inf)
-time_to_avg_prn_injections %>% write.xlsx("output/time_to_avg_prn_injections.xlsx")
+time_to_avg_prn_injections %>% write.xlsx(file.path(base_output_dir, "time_to_avg_prn_injections.xlsx"))
 
 
 # View the resulting dataset
@@ -159,7 +169,7 @@ data_wide_yearly <- data_yearly %>%
     pivot_wider(id_cols = year, names_from = c(group, subject_id), values_from = total) %>%
     pad_df_groups()
 data_wide_yearly %>%
-    write.xlsx("output/from_4weeks-wide_prn_injections_yearly.xlsx")
+    write.xlsx(file.path(base_output_dir, "from_4weeks-wide_prn_injections_yearly.xlsx"))
 
 
 data_wide_total <- data_yearly %>%
@@ -171,7 +181,7 @@ data_wide_total <- data_yearly %>%
 print(data_wide_total, n = Inf)
 
 data_wide_total %>%
-    write.xlsx("output/from_4weeks-wide_prn_injections_total.xlsx")
+    write.xlsx(file.path(base_output_dir, "from_4weeks-wide_prn_injections_total.xlsx"))
 
 # Calculate mean PRN treatment load per group and year
 data_average <- data_yearly %>%
@@ -221,7 +231,7 @@ data_weekly <- data_long %>%
 print(data_weekly, n = Inf)
 
 data_weekly %>%
-    write.xlsx("output/from_4weeks-wide_prn_injections_weekly.xlsx")
+    write.xlsx(file.path(base_output_dir, "from_4weeks-wide_prn_injections_weekly.xlsx"))
 
 
 prn_injections_data <- data_long %>%
@@ -257,7 +267,7 @@ first_year_auc <- npi_plus_all_injection_data %>%
     arrange(schedule) %>%
     pivot_wider(id_cols = c(subject_id, total_injections, prn_injections), names_from = schedule, values_from = auc_first_year)
 first_year_auc %>%
-    write.xlsx("output/first_year_auc_x_injections.xlsx")
+    write.xlsx(file.path(base_output_dir, "first_year_auc_x_injections.xlsx"))
 
 # auc 2-3 year of NPI x subject
 second_third_year_auc <- npi_plus_all_injection_data %>%
@@ -271,4 +281,4 @@ second_third_year_auc <- npi_plus_all_injection_data %>%
     arrange(schedule) %>%
     pivot_wider(id_cols = c(subject_id, total_injections, prn_injections), names_from = schedule, values_from = auc_second_third_year)
 second_third_year_auc %>%
-    write.xlsx("output/second_third_year_auc_x_injections.xlsx")
+    write.xlsx(file.path(base_output_dir, "second_third_year_auc_x_injections.xlsx"))
