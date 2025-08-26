@@ -66,7 +66,7 @@ walk(
     ~ dir.create(.x, showWarnings = FALSE, recursive = TRUE)
 )
 
-full_dataset <- read_excel(file.path("data/old", "Stats Wisconsin (Nick Edited).xlsx"), sheet = 6, n_max = 31) %>% # Nick All NPI and Injections
+full_dataset <- read_excel(file.path("data", "Stats Wisconsin (Nick Edited).xlsx"), sheet = 6, n_max = 31) %>% # Nick All NPI and Injections
     dplyr::select(-starts_with("D from")) %>%
     # there's a star in one of these columns, just remove from all to avoid numeric error
     mutate(across(everything(), .fns = function(x) gsub(pattern = "\\*", replacement = "", x = x))) %>%

@@ -44,7 +44,7 @@ npi_data %>%
     pivot_wider(id_cols = c(n, schedule), names_from = week, values_from = mean_npi)
 signif(npi_data$mean_npi, 4)
 
-npa_data <- read_excel("data/old/2024-10-22 Endolaserless_RedCap_Data.xlsx") %>%
+npa_data <- read_excel("data/2024-10-22 Endolaserless_RedCap_Data.xlsx") %>%
     rename(subject_id = `Subject ID`, week = `Event Name`, npa = `Nonperfusion area within eye`) %>%
     dplyr::select(subject_id, week, npa) %>%
     left_join(init_npi_dat %>% dplyr::select(subject_id, schedule) %>% distinct(), by = join_by(subject_id)) %>%
@@ -75,7 +75,7 @@ npa_data_means %>%
     pivot_wider(id_cols = c(n, schedule), names_from = week, values_from = mean_npa)
 
 
-your_data <- read_excel(file.path("data/old/prn_injections.xlsx"), sheet = 1, n_max = 31)
+your_data <- read_excel(file.path("data/prn_injections.xlsx"), sheet = 1, n_max = 31)
 
 # remove these subjects as they are not in the final analysis
 subject_ids_to_remove <- c("L-01", "L-18", "L-30", "L-05", "L-08", "L-09", "L-11", "L-25")

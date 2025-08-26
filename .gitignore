@@ -34,6 +34,10 @@ Thumbs.db
 !docs/
 !docs/*.png
 
+# Include main data files
+!data/
+!data/*.xlsx
+
 # Include Prism output figures
 !npi_project/
 !npi_project/prism_output/

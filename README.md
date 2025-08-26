@@ -37,7 +37,9 @@ endolaserless_analysis/
 │   ├── Figure3.png                     # Figure 3 - Treatment load and PRN injections
 │   └── SupplementalFigure1.png         # Supplemental Figure 1 - NPA changes
 ├── data/                               # Input data files (NOT committed to repository)
-│   └── Laserless Study DATA Updated for 3 Year Data (1).xlsx
+│   ├── 2024-10-22 Endolaserless_RedCap_Data.xlsx    # Initial analysis data (NOT committed to repository)
+│   ├── prn_injections.xlsx
+│   └── Stats Wisconsin (Nick Edited).xlsx
 ├── processed_data/                      # Processed analysis data (NOT committed to repository)
 │   └── npi_project/
 │       └── output-week4_baseline/
