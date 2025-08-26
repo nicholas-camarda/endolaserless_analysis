@@ -33,9 +33,14 @@ endolaserless_analysis/
 │   ├── count_prn_injections.R          # PRN injection analysis and counting
 │   ├── endolaserless_analysis-2.R      # Main NPI analysis script
 │   └── helper_scripts.R                # Utility functions and helper code
+├── docs/                               # PNG figure files for GitHub display
+│   ├── Figure1.png                     # Figure 1 - NPI changes over time
+│   ├── Figure2.png                     # Figure 2 - NPI increases in q16 group
+│   ├── Figure3.png                     # Figure 3 - Treatment load and PRN injections
+│   └── SupplementalFigure1.png         # Supplemental Figure 1 - NPA changes
 ├── npi_project/
 │   ├── prism_output/                   # Prism-generated figures and visualizations
-│   │   ├── Final/                      # Final publication figures
+│   │   ├── Final/                      # Final publication figures (TIFF format)
 │   │   └── [other analysis plots]
 │   └── output/                         # Analysis output files (not committed)
 ├── README.md                           # This file
