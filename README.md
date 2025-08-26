@@ -53,29 +53,29 @@ All visualizations were created using **GraphPad Prism**. The following key figu
 
 ### Final Publication Figures
 
-**Figure 1. Combined q8 and q16 treatment schedules data shows that NPI increase over time despite intravitreal aflibercept monotherapy.**
-
 ![Figure 1](docs/Figure1.png)
+
+**Figure 1. Combined q8 and q16 treatment schedules data shows that NPI increase over time despite intravitreal aflibercept monotherapy.**
 
 Bar graphs showing nonperfusion index (NPI) changes over time. Blue squares represent q8 (N=9) group patients. Orange circles represent q16 (N=14) group patients. Statistics using mixed effects model with Dunnett posttest and comparisons to week 4. ***p<0.001**, **p<0.0001**. Error bars, mean ± SEM.
 
-**Figure 2. In q16 treatment schedule but not q8, NPI increases significantly from baseline.**
-
 ![Figure 2](docs/Figure2.png)
+
+**Figure 2. In q16 treatment schedule but not q8, NPI increases significantly from baseline.**
 
 (A) Bar graphs showing baseline non-perfusion index (NPI) at week 4 for q8 (N=9) and q16 (N=14) treatment schedules. Unpaired Student's T-test. p=ns. (B) Timeline graph showing raw NPI and (C) bar graph showing the change in NPI from week 4 baseline at each follow-up appointment stratified by treatment group. Statistics using mixed effects model with Tukey posttest and all multiple comparisons. **p<0.0001**. Error bars, mean ± SEM. 
 
-**Figure 3. Decreased treatment load and later PRN injections are insufficient to prevent RNP progression.**
-
 ![Figure 3](docs/Figure3.png)
+
+**Figure 3. Decreased treatment load and later PRN injections are insufficient to prevent RNP progression.**
 
 Box-and-whisker plots displaying the (A) cumulative total and (B) cumulative PRN (non-scheduled) intravitreal aflibercept injections received at each timepoint stratified by q8 (N=9) and q16 (N=14) treatment groups. Box-and-whisker plot shows the median (line inside the box), interquartile range (box), and whiskers representing 1.5 times the interquartile range. Dotted horizontal line in (A) indicates 10 cumulative injections. Statistics using two-way repeated measures ANOVA with (A) Holm-Sidak posttest and comparisons between treatment schedules at each timepoint and (B) Tukey posttest and all multiple comparisons.(C) Scatter plot showing the total number of injections versus the area under the curve (AUC) of nonperfusion index (NPI) from baseline week 4 to week 152 for each subject stratified by treatment group. Statistics using simple linear regression with p-value representing the result of F-test for non-zero slope.  **p<0.05**, **p<0.01**, ***p<0.001**, **p<0.0001**. Error bars, mean ± SEM. 
 
 ### Supplementary Figures
 
-**Supplementary Figure 1. Combined q8 and q16 treatment schedules data shows that NPA increase over time despite intravitreal aflibercept monotherapy.**
-
 ![Supplementary Figure 1](docs/SupplementalFigure1.png)
+
+**Supplementary Figure 1. Combined q8 and q16 treatment schedules data shows that NPA increase over time despite intravitreal aflibercept monotherapy.**
 
 Bar graphs showing nonperfusion area (NPA) changes over time. Blue squares represent q8 (N=9) group patients. Orange circles represent q16 (N=14) group patients. Statistics using mixed effects model with Dunnett posttest and comparisons to week 4. **p<0.05**, **p<0.01**. Error bars, mean ± SEM.
 
